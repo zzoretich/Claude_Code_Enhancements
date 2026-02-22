@@ -15,7 +15,6 @@ A collection of custom agents and skills that extend [Claude Code](https://docs.
 | Skill | Slash Command | Description |
 |-------|---------------|-------------|
 | **[Intelligent Model Router](skills/intelligent-model-router/)** | `/smartroute` | Autonomous model routing that analyzes task complexity (0-15 scoring), decomposes work into planning (Opus), execution (Sonnet), and simple (Haiku) phases. Achieves 60-80% cost savings vs all-Opus while maintaining quality where it matters. |
-| **[Comprehensive Self-Improvement](skills/comprehensive-self-improvement/)** | *Auto-triggered* | Post-implementation learning system. Analyzes what was built, enhances specialist agent files with learned patterns, creates new sub-agents to fill coverage gaps, and logs all improvements for compounding knowledge. |
 | **[Fully Autonomous Mode](skills/fullyautonomous/)** | `/fullyautonomous` | Status dashboard for autonomous mode. Displays current state, active behavioral directives, and safety boundaries that are always enforced. |
 | **[Auto-On](skills/auto-on/)** | `/auto-on` | Enables fully autonomous mode — bypasses permission prompts for the session. Backs up current permissions, enables all behavioral directives, and maintains a full audit log. |
 | **[Auto-Off](skills/auto-off/)** | `/auto-off` | Disables fully autonomous mode — restores standard permission prompts. Reverts behavioral directives and logs the action. |
