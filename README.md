@@ -1,6 +1,6 @@
 # Claude Code Enhancements
 
-A collection of custom agents and skills that extend [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with intelligent automation, self-improvement, and autonomous operation capabilities.
+A collection of custom agents and skills that extend [Claude Code](https://docs.anthropic.com/en/docs/claude-code) with intelligent automation and autonomous operation capabilities.
 
 ## What's Inside
 
@@ -9,6 +9,7 @@ A collection of custom agents and skills that extend [Claude Code](https://docs.
 | Agent | Description |
 |-------|-------------|
 | **[AI Improvement Agent](agents/ai-improvement-agent.md)** | Evaluates, interrogates, and improves AI agent configurations. Provides structured improvement recommendations with options and reasoning before making any changes. Works with both Claude Code agents and ServiceNow AI configurations. |
+| **[Deployment Agent](agents/deployment-agent.md)** | Analyzes pre-built agent configuration files and systematically adapts them to fit your specific environment. Handles cross-platform path adaptation, data source migration, team/stakeholder swaps, and domain customization while preserving proven functional logic. |
 
 ### Skills
 
@@ -37,15 +38,15 @@ Restart Claude Code to pick up the new configurations.
 
 ```
 .
+├── README.md
 ├── agents/
-│   └── ai-improvement-agent.md        # Agent interrogator & improvement advisor
+│   ├── ai-improvement-agent.md        # Agent interrogator & improvement advisor
+│   └── deployment-agent.md            # Cross-platform agent config adapter
 └── skills/
     ├── auto-off/
     │   └── SKILL.md                    # Disable autonomous mode
     ├── auto-on/
     │   └── SKILL.md                    # Enable autonomous mode
-    ├── comprehensive-self-improvement/
-    │   └── SKILL.md                    # Post-execution learning system
     ├── fullyautonomous/
     │   ├── SKILL.md                    # Autonomous mode status & docs
     │   └── autonomous-config.json      # Runtime configuration state
@@ -75,15 +76,6 @@ A three-part system for controlling permission behavior:
 
 Safety boundaries are **always enforced** regardless of mode — no credentials, SSH keys, API tokens, or destructive operations on protected paths.
 
-### Self-Improvement System
-
-Runs automatically after implementation cycles complete:
-
-1. **Analyze** — Reviews what was built and identifies patterns
-2. **Enhance** — Updates specialist agent files with learned improvements
-3. **Expand** — Creates new sub-agents to fill discovered gaps
-4. **Log** — Records all changes for traceability
-
 ### AI Improvement Agent
 
 An interrogation-first approach to agent improvement:
@@ -92,6 +84,15 @@ An interrogation-first approach to agent improvement:
 2. **Strategic questioning** — Probes for pain points, goals, and constraints
 3. **Structured options** — Presents 2-4 improvement paths with trade-offs
 4. **Approval gate** — Never modifies an agent without explicit consent
+
+### Deployment Agent
+
+An environment adaptation specialist for agent configuration files:
+
+1. **Analysis** — Reads the source agent file and categorizes every element (paths, data sources, team names, domain config, functional logic)
+2. **Discovery** — Asks targeted questions in logical groups (environment, data sources, team, domain, workflow, output)
+3. **Customization** — Surgically replaces environment-specific elements while preserving proven functional logic
+4. **Validation** — Verifies all paths are absolute, data access methods match the target setup, and no source-environment artifacts remain
 
 ## Requirements
 
