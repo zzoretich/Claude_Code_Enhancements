@@ -8,6 +8,7 @@ A collection of custom agents and skills that extend [Claude Code](https://docs.
 
 | Agent | Description |
 |-------|-------------|
+| **[Agent Prompt Architect](agents/agent-prompt-architect.md)** | Elite prompt engineer that transforms task requirements into precisely-engineered agent configurations. Handles requirements analysis, expert persona design, system prompt architecture, and validation — outputs production-ready agent specs. |
 | **[AI Improvement Agent](agents/ai-improvement-agent.md)** | Evaluates, interrogates, and improves AI agent configurations. Provides structured improvement recommendations with options and reasoning before making any changes. Works with both Claude Code agents and ServiceNow AI configurations. |
 | **[Deployment Agent](agents/deployment-agent.md)** | Analyzes pre-built agent configuration files and systematically adapts them to fit your specific environment. Handles cross-platform path adaptation, data source migration, team/stakeholder swaps, and domain customization while preserving proven functional logic. |
 
@@ -40,6 +41,7 @@ Restart Claude Code to pick up the new configurations.
 .
 ├── README.md
 ├── agents/
+│   ├── agent-prompt-architect.md      # AI agent configuration designer
 │   ├── ai-improvement-agent.md        # Agent interrogator & improvement advisor
 │   └── deployment-agent.md            # Cross-platform agent config adapter
 └── skills/
@@ -75,6 +77,15 @@ A three-part system for controlling permission behavior:
 3. `/auto-off` — Disable (restores standard permission flow)
 
 Safety boundaries are **always enforced** regardless of mode — no credentials, SSH keys, API tokens, or destructive operations on protected paths.
+
+### Agent Prompt Architect
+
+Transforms task requirements into production-ready agent configurations:
+
+1. **Discovery** — Asks targeted clarifying questions when requirements are ambiguous, too broad, or missing constraints
+2. **Design** — Structures system prompts with identity, responsibilities, methodologies, quality standards, and edge case handling
+3. **Optimization** — Ensures every instruction is specific, actionable, and builds agent autonomy
+4. **Validation** — Verifies the agent can handle its core task independently with built-in quality control
 
 ### AI Improvement Agent
 
